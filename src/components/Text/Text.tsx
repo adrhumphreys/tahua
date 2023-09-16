@@ -1,10 +1,51 @@
-import type { FC, ReactNode } from "react";
-import * as styles from "./Text.css";
+import { createElement, type CSSProperties, type ReactNode } from "react";
+import { sprinkles, Sprinkles } from "./Text.css";
+import clsx from "clsx";
 
-type Props = {
+type TextElements =
+  | "h1"
+  | "h2"
+  | "h3"
+  | "h4"
+  | "h5"
+  | "p"
+  | "span"
+  | "div"
+  | "label"
+  | "caption";
+
+interface Props extends Sprinkles {
+  as?: TextElements;
   children: ReactNode;
+  className?: string;
+  UNSAFE_style?: CSSProperties;
+}
+
+export const Text = ({
+  align,
+  as,
+  className,
+  color,
+  size,
+  weight,
+  UNSAFE_style = {},
+  ...props
+}: Props) => {
+  const component = as ?? "p";
+
+  return createElement(component, {
+    ...props,
+    style: UNSAFE_style,
+    className: clsx(
+      className,
+      sprinkles({
+        align,
+        color,
+        size,
+        weight,
+      })
+    ),
+  });
 };
 
-export const Text: FC<Props> = ({ children }) => {
-  return <div className={styles.root}>{children}</div>;
-};
+Text.displayName = "Text";

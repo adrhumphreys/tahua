@@ -10,6 +10,7 @@ export default defineConfig({
     lib: {
       entry: {
         index: resolve(__dirname, "src", "index.tsx"),
+        global: resolve(__dirname, "src", "styles", "global.ts"),
       },
       formats: ["es"],
     },

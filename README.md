@@ -1,6 +1,10 @@
 # Vanilla Extract Design System
 
-This is an example of a library that can be bundled into a package that you can import into next.js and vite without installing anything on top.
+This is an example of a library that can be bundled into a package that you can import into next.js and vite without installing vanilla extract in the consuming application.
+
+For **Vite** you'll need to create a `styles.ts` file and update `index.html` to import it in the header, then inside the `styles.ts` you'll want to put `import @whero/tahua`. This is just to handle the import order so that global styles are imported first, then classes afterwards.
+
+For **Next.js** you'll need to update either the root `layout.tsx` or `_app.tsx` to include `import @whero/tahua`
 
 Currently, two official plugins are available:
 
