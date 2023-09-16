@@ -14,7 +14,7 @@ type TextElements =
   | "label"
   | "caption";
 
-interface Props extends Sprinkles {
+export interface Props extends Sprinkles {
   as?: TextElements;
   children: ReactNode;
   className?: string;

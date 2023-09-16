@@ -6,6 +6,14 @@ For **Vite** you'll need to create a `styles.ts` file and update `index.html` to
 
 For **Next.js** you'll need to update either the root `layout.tsx` or `_app.tsx` to include `import @whero/tahua`
 
+## Install w/ Next
+
+- `npm install @whero/tahua`
+- Follow instructions above
+- Add the DesignSystemProvider with Link and Image components passed through
+
+---
+
 Currently, two official plugins are available:
 
 - [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh

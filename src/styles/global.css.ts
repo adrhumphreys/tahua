@@ -41,17 +41,7 @@ globalStyle("#root, main, #__next", {
   height: "100%",
 });
 
-globalStyle("button", {
-  appearance: "button",
-  backgroundColor: "transparent",
-  backgroundImage: "none",
-  border: 0,
-  cursor: "pointer",
-  color: "inherit",
-  padding: 0,
-});
-
-globalStyle("[type=button],[type=reset],[type=submit]", {
+globalStyle("[type=button],[type=reset],[type=submit],button", {
   appearance: "button",
   backgroundColor: "transparent",
   backgroundImage: "none",
