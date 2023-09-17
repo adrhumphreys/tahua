@@ -1,4 +1,5 @@
 import { recipe, RecipeVariants } from "@vanilla-extract/recipes";
+import { vars } from "../../styles";
 
 export const button = recipe({
   base: {
@@ -7,7 +8,7 @@ export const button = recipe({
 
   variants: {
     color: {
-      neutral: { background: "whitesmoke" },
+      neutral: { background: vars.color.brand },
       brand: { background: "blueviolet" },
       accent: { background: "slateblue" },
     },
