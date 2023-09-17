@@ -3,7 +3,7 @@ import { visualizer } from "rollup-plugin-visualizer";
 import preserveDirectives from "rollup-plugin-preserve-directives";
 import react from "@vitejs/plugin-react";
 import dts from "vite-plugin-dts";
-import { defineConfig } from "vitest/config";
+import { defineConfig } from "vite";
 import { resolve } from "path";
 
 export default defineConfig({
@@ -33,12 +33,5 @@ export default defineConfig({
       },
     },
     sourcemap: true,
-  },
-  test: {
-    globals: true,
-    include: ["src/**/*.test.{ts,tsx}"],
-    watch: false,
-    environment: "jsdom",
-    setupFiles: "./setupTest.ts",
   },
 });
